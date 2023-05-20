@@ -35,7 +35,14 @@ class recoleccion_Diaria:
         print('----------------------------------------')
 
     def actualizar(self):
+        """Funcion Para verificar los cambios en la recoleccion diaria
+        """
         self.get_Residuos_Obtenidos()
 
     def suscribirse(self, turno: object):
+        """Funcion para suscribirse a un turno
+
+        Args:
+            turno (object): Turno al cual se va a suscribir
+        """
         turno.agregar_observador(self)

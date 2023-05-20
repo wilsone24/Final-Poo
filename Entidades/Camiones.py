@@ -19,7 +19,7 @@ class Camion:
         return self.__placa
     
     @placa.setter
-    def nombre(self, nuevo)->str:
+    def nombre(self, nuevo:str)->None:
         """Funcion para definir una nueva placa para el camion
 
         Args:

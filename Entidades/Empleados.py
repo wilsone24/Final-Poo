@@ -11,11 +11,21 @@ class Empleado:
         self.id = id
     
     @property 
-    def nombre(self):
+    def nombre(self)->str:
+        """Funcion para acceder al nombre del empleado
+
+        Returns:
+            str: Nombre del empleado
+        """
         return self.__nombre
     
     @nombre.setter
-    def nombre(self, nuevo):
+    def nombre(self, nuevo:str)->None:
+        """Funcion para definir un nuevo nombre para el empleado
+
+        Args:
+            nuevo (str): Nuevo nombre del empleado
+        """
         self.__nombre = nuevo
 
 
@@ -35,12 +45,12 @@ class Asistente(Empleado):
         """Funcion para acceeder al tipo de empleado
 
         Returns:
-            tipo(str): tipo de empleado
+            str: tipo de empleado
         """
         return self.__tipo
     
     @tipo.setter
-    def tipo(self, nuevo):
+    def tipo(self, nuevo:str)->None:
         """Definie un nuevo tipo de empleado
 
         Args:
@@ -61,7 +71,7 @@ class Conductor(Empleado):
         """Funcion para acceeder al tipo de empleado
 
         Returns:
-            tipo(str): tipo de empleado
+            str: tipo de empleado
         """
         return self.__tipo
     
@@ -73,6 +83,6 @@ class Conductor(Empleado):
         """Definie un nuevo tipo de empleado
 
         Args:
-            nuevo (str): nuevo tipo de empleado
+            str: nuevo tipo de empleado
         """
         self.__tipo = nuevo

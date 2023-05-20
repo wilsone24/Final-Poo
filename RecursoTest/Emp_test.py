@@ -1,7 +1,7 @@
 from Entidades.Camiones import Camion
 
 class Empresa: 
-    __instance = None
+    
     def __init__(self, nombre:str, id:int) -> None:
         """Constructor de la clase Empresa
 
@@ -9,14 +9,11 @@ class Empresa:
             nombre (str): Nombre de la empresa
             id (int): identificador unico
         """
-        if Empresa.__instance is not None:
-            raise Exception("La clase Empresa ya tiene una instancia.")
-        else:
-            Empresa.__instance = self
-            self.__nombre = nombre
-            self.id = id
-            self.camiones = dict({}) 
-            self.empleados = dict({})        
+        Empresa.__instance = self
+        self.__nombre = nombre
+        self.id = id
+        self.camiones = dict({}) 
+        self.empleados = dict({})        
 
     @staticmethod
     def get_instance()->None:
