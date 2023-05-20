@@ -11,7 +11,7 @@ Se implementó en Python los métodos que permitan el cálculo de la cantidad de
 
 ## **UML**
 
-
+![](https://github.com/wilsone24/Final-Poo/blob/main/UML.png)
 
 ## **Instrucciones**
 1. Ingresar en el enlace del repositorio de Github: https://github.com/wilsone24/Final-Poo
