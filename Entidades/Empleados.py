@@ -79,7 +79,7 @@ class Conductor(Empleado):
         print(f'El conductor {self.nombre} esta conduciendo')
     
     @tipo.setter
-    def tipo(self, nuevo):
+    def tipo(self, nuevo:str):
         """Definie un nuevo tipo de empleado
 
         Args:

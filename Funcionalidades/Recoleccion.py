@@ -1,4 +1,7 @@
-class recoleccion_Diaria:
+from Entidades.Observer import Observador
+
+
+class recoleccion_Diaria(Observador):
     def __init__(self, empresa:object) -> None:
         """Constructor de la clase recoleccion diaria
         Se inicializan las variables que contabilizaran la cantidad de materiales recogidos
