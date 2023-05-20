@@ -22,7 +22,7 @@ Se implementó en Python los métodos que permitan el cálculo de la cantidad de
 
 ### **Ejecutar App**
 
-Una vez Clonado el repositorio se encontrará con 3 carpetas y 3 archivos, de los cuales para iniciar el proyecto unicamente abrira el **main.py** y lo ejecutará.
+Una vez Clonado el repositorio se encontrará con 3 carpetas y 4 archivos, de los cuales para iniciar el proyecto unicamente abrira el **main.py** y lo ejecutará con los valores que se le colocó por defecto, si usted desea cambiarlos y colocar sus valores especificos, simplemente ingresa en la carpeta funcionalidades, archivo Funciones.py y en la funcion main coloca los valores deseados.
 
 Así mismo si quiere verificar el codigo, clases, funcionalidades, entre otros aspectos, la clasificacion de las carpetas es la siguiente:
 
