@@ -32,7 +32,7 @@ class Empresa:
         Args:
             empleado (object): empleado que será asignado a la empresa
         """
-        self.empleados.update({empleado.tipo:empleado})
+        self.empleados.update({empleado.nombre:empleado})
 
     def GenerarCamion(self, placa:str, modelo:str)-> None:
         """Funcion Para generar camiones que se almacenaran en la empresa

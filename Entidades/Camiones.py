@@ -10,9 +10,19 @@ class Camion:
         self.modelo = modelo
     
     @property 
-    def placa(self):
+    def placa(self)->str:
+        """Funcion para acceder a la placa del camion
+
+        Returns:
+            str: Placa del camion
+        """
         return self.__placa
     
     @placa.setter
-    def nombre(self, nuevo):
+    def nombre(self, nuevo)->str:
+        """Funcion para definir una nueva placa para el camion
+
+        Args:
+            nuevo (str): Nueva placa del camion
+        """
         self.__placa = nuevo

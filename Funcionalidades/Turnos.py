@@ -1,3 +1,4 @@
+
 class Turno:
     def __init__(self, conductor:object, asis1:object, asis2:object, camion:object, hora_inicio:str, hora_fin:str, puntos_geograficos:list, recoleccion_Diaria:object) -> None:
         """Constructor de la clase Turno
@@ -23,6 +24,8 @@ class Turno:
         self.ruta = puntos_geograficos
         self.carga_recogida = 0
         self.recoleccion_Diaria = recoleccion_Diaria
+        self.observadores = []
+
 
     def recolectar(self)-> None:
         """Metodo para recolectar los materiales en la ruta especifica
@@ -35,18 +38,31 @@ class Turno:
 
         for i in self.ruta:
             if i.material == "vidrio":
+                print()
                 self.recoleccion_Diaria.cantidad_vidrio += i.cantidad
+                print(f'Se recogieron {i.cantidad} kg de Vidrio en la localizacion {i.ciudad} Latitud:{i.latitud} Longitud:{i.longitud}')
             elif i.material == "papel":
                 self.recoleccion_Diaria.cantidad_papel += i.cantidad
+                print(f'Se recogieron {i.cantidad} kg de Papel en la localizacion {i.ciudad} Latitud:{i.latitud} Longitud:{i.longitud}')
             elif i.material == "plastico":
                 self.recoleccion_Diaria.cantidad_plastico += i.cantidad
+                print(f'Se recogieron {i.cantidad} kg de Plastico en la localizacion {i.ciudad} Latitud:{i.latitud} Longitud:{i.longitud}')
             elif i.material == "metal":
                 self.recoleccion_Diaria.cantidad_metal += i.cantidad
+                print(f'Se recogieron {i.cantidad} kg de Metal en la localizacion {i.ciudad} Latitud:{i.latitud} Longitud:{i.longitud}')
             elif i.material == "residuos organicos":
                 self.recoleccion.cantidad_residuos_organicos += i.cantidad
+                print(f'Se recogieron {i.cantidad} kg de Residuos organicos en la localizacion {i.ciudad} Latitud:{i.latitud} Longitud:{i.longitud}')
+            
             self.carga_recogida += i.cantidad
+            for observador in self.observadores:
+                observador.actualizar()
+                print()
 
     def __repr__(self) -> str:
         """Metodo para representar de forma adecuada el turno
         """
-        return f'El turno comenzo a las {self.hora_inicio} y termina a las {self.hora_fin}'
+        return f'El turno comenzó a las {self.hora_inicio} y termina a las {self.hora_fin}'
+    
+    def agregar_observador(self, observador:object):
+        self.observadores.append(observador)

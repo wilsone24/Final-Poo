@@ -33,3 +33,9 @@ class recoleccion_Diaria:
         print('----------------------------------------')
         print(f'| Residuos org. |   {self.cantidad_residuos_organicos}    |')
         print('----------------------------------------')
+
+    def actualizar(self):
+        self.get_Residuos_Obtenidos()
+
+    def suscribirse(self, turno: object):
+        turno.agregar_observador(self)
